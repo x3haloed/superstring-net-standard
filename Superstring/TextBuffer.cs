@@ -9,6 +9,47 @@ namespace Superstring
         [DllImport(@"../cpp/libhello-cpp.so")]
         public static extern void PrintHelloWorld();
                
+        public TextBuffer text_buffer {get;set;}
+        public std::unordered_set<CancellableWorker *> outstanding_workers {get;set;}
+        private static void construct(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void get_length(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void get_extent(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void get_line_count(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void has_astral(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void get_text(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void get_character_at_position(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void get_text_in_range(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void set_text(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void set_text_in_range(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void line_for_row(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void line_length_for_row(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void line_ending_for_row(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void get_lines(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void character_index_for_position(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void position_for_character_index(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void find(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void find_sync(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void find_all(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void find_all_sync(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void find_and_mark_all_sync(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void find_words_with_subsequence_in_range(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void is_modified(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void load(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void base_text_matches_file(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void save(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void load_sync(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void save_sync(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void serialize_changes(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void deserialize_changes(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void reset(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void base_text_digest(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void get_snapshot(const Nan::FunctionCallbackInfo<v8::Value> &info);
+        private static void dot_graph(const Nan::FunctionCallbackInfo<v8::Value> &info);
+
+        private void cancel_queued_workers();
+
+
+
 
         public object[] findSync (pattern, range)
         {

@@ -417,3 +417,4 @@ MigrationBackup/
 *.app
 
 # End of https://www.gitignore.io/api/c++
+/.vscode/c_cpp_properties.json
