@@ -29,6 +29,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.Repository.LocalPath)/superstring.wasm'
+    PathtoPublish: '$(Build.Repository.LocalPath)/superstring.*'
     ArtifactName: 'browser'
     publishLocation: 'Container'
