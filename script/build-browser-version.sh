@@ -36,21 +36,21 @@ emcc                                         \
   vendor/pcre/10.23/src/pcre2_valid_utf.c    \
   vendor/pcre/10.23/src/pcre2_xclass.c
 
-em++                                    \
-  --bind                                \
-  -o browser.js                         \
-  -O3                                   \
-  -I src/native-src/bindings/em                    \
-  -I src/native-src/core                           \
-  -I vendor/libcxx                      \
-  -I vendor/pcre/include                \
-  -D PCRE2_CODE_UNIT_WIDTH=16           \
-  -xc++                                 \
-  --pre-js src/native-src/bindings/em/prologue.js  \
-  --post-js src/native-src/bindings/em/epilogue.js \
-  src/native-src/core/*.cc                         \
-  src/native-src/bindings/em/*.cc                  \
-  build/pcre.o                          \
-  -s TOTAL_MEMORY=134217728             \
-  --memory-init-file 0                  \
+em++                                                \
+  --bind                                            \
+  -o browser.js                                     \
+  -O3                                               \
+  -I src/native-src/bindings/em                     \
+  -I src/native-src/core                            \
+  -I vendor/libcxx                                  \
+  -I vendor/pcre/include                            \
+  -D PCRE2_CODE_UNIT_WIDTH=16                       \
+  -xc++                                             \
+  --pre-js src/native-src/bindings/em/prologue.js   \
+  --post-js src/native-src/bindings/em/epilogue.js  \
+  src/native-src/core/*.cc                          \
+  src/native-src/bindings/em/*.cc                   \
+  build/pcre.o                                      \
+  -s TOTAL_MEMORY=134217728                         \
+  --memory-init-file 0                              \
   "$@"
