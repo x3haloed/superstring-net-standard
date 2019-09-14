@@ -23,6 +23,12 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.Repository.LocalPath)'
-    ArtifactName: 'drop'
+    PathtoPublish: '$(Build.Repository.LocalPath)/build/Release'
+    ArtifactName: 'node'
+    publishLocation: 'Container'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.Repository.LocalPath)/browser.js'
+    ArtifactName: 'browser'
     publishLocation: 'Container'
