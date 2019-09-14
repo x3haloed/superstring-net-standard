@@ -15,10 +15,17 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: CmdLine@2
+  inputs:
+    script: './script/install-emscripten.sh'
+    workingDirectory: '$(Build.ArtifactStagingDirectory)'
+    failOnStderr: true
+
 - script: |
     npm install
     npm run build
   displayName: 'npm install and build'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
