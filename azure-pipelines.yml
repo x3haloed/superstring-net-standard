@@ -18,11 +18,11 @@ steps:
 - script: |
     ./script/install-emscripten.sh
     npm install
-    npm run build
+    npm run build:browser
   displayName: 'npm install and build'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: '$(Build.Repository.LocalPath)/build/Release'
     ArtifactName: 'drop'
     publishLocation: 'Container'
