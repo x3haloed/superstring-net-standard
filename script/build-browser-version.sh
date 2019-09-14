@@ -36,7 +36,7 @@ emcc                                         \
   vendor/pcre/10.23/src/pcre2_valid_utf.c    \
   vendor/pcre/10.23/src/pcre2_xclass.c
 
-em++                                                \
+emcc                                                \
   -o superstring.wasm                               \
   -O3                                               \
   -I src/native-src/bindings/em                     \
