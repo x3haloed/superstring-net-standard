@@ -7,7 +7,7 @@ namespace SuperstringSample
     {
         static void Main(string[] args)
         {
-            var module = WebAssembly.Module.ReadFromBinary(@"C:\Code\superstring-net-standard\build\Release\superstring_core.a");
+            var module = WebAssembly.Module.ReadFromBinary(@"C:\Code\superstring-net-standard\superstring.wasm");
             //var _instanceCreator = Compile.FromBinary<MarkerIndex>("superstring.wasm");
             //using (var instance = _instanceCreator(new ImportDictionary()))
             //{
