@@ -38,7 +38,7 @@ emcc                                         \
 
 em++                                                \
   -std=c++11                                        \
-  -o superstring.wasm                                     \
+  -o superstring.js                                 \
   -O3                                               \
   -I src/native-src/core                            \
   -I vendor/libcxx                                  \
