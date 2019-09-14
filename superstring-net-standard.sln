@@ -13,6 +13,74 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcore", "netcore", "{6DEA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreUnitTests", "test\netcore\NetCoreUnitTests\NetCoreUnitTests.csproj", "{971AEA3B-405D-4683-AE7C-72C5A0989C35}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "native-src", "native-src", "{183F2FC2-04B7-44E5-A52D-8782B52078BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{1BC6C3B8-9C62-4441-8C96-3E1BC2C8765F}"
+	ProjectSection(SolutionItems) = preProject
+		src\native-src\core\encoding-conversion.cc = src\native-src\core\encoding-conversion.cc
+		src\native-src\core\encoding-conversion.h = src\native-src\core\encoding-conversion.h
+		src\native-src\core\flat_set.h = src\native-src\core\flat_set.h
+		src\native-src\core\libmba-diff.cc = src\native-src\core\libmba-diff.cc
+		src\native-src\core\libmba-diff.h = src\native-src\core\libmba-diff.h
+		src\native-src\core\marker-index.cc = src\native-src\core\marker-index.cc
+		src\native-src\core\marker-index.h = src\native-src\core\marker-index.h
+		src\native-src\core\optional.h = src\native-src\core\optional.h
+		src\native-src\core\patch.cc = src\native-src\core\patch.cc
+		src\native-src\core\patch.h = src\native-src\core\patch.h
+		src\native-src\core\point.cc = src\native-src\core\point.cc
+		src\native-src\core\point.h = src\native-src\core\point.h
+		src\native-src\core\range.cc = src\native-src\core\range.cc
+		src\native-src\core\range.h = src\native-src\core\range.h
+		src\native-src\core\regex.cc = src\native-src\core\regex.cc
+		src\native-src\core\regex.h = src\native-src\core\regex.h
+		src\native-src\core\serializer.h = src\native-src\core\serializer.h
+		src\native-src\core\text-buffer.cc = src\native-src\core\text-buffer.cc
+		src\native-src\core\text-buffer.h = src\native-src\core\text-buffer.h
+		src\native-src\core\text-diff.cc = src\native-src\core\text-diff.cc
+		src\native-src\core\text-diff.h = src\native-src\core\text-diff.h
+		src\native-src\core\text-slice.cc = src\native-src\core\text-slice.cc
+		src\native-src\core\text-slice.h = src\native-src\core\text-slice.h
+		src\native-src\core\text.cc = src\native-src\core\text.cc
+		src\native-src\core\text.h = src\native-src\core\text.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bindings", "bindings", "{4EF810D1-3BDB-4C91-A237-269AE5675446}"
+	ProjectSection(SolutionItems) = preProject
+		src\native-src\bindings\bindings.cc = src\native-src\bindings\bindings.cc
+		src\native-src\bindings\marker-index-wrapper.cc = src\native-src\bindings\marker-index-wrapper.cc
+		src\native-src\bindings\marker-index-wrapper.h = src\native-src\bindings\marker-index-wrapper.h
+		src\native-src\bindings\noop.h = src\native-src\bindings\noop.h
+		src\native-src\bindings\number-conversion.h = src\native-src\bindings\number-conversion.h
+		src\native-src\bindings\patch-wrapper.cc = src\native-src\bindings\patch-wrapper.cc
+		src\native-src\bindings\patch-wrapper.h = src\native-src\bindings\patch-wrapper.h
+		src\native-src\bindings\point-wrapper.cc = src\native-src\bindings\point-wrapper.cc
+		src\native-src\bindings\point-wrapper.h = src\native-src\bindings\point-wrapper.h
+		src\native-src\bindings\range-wrapper.cc = src\native-src\bindings\range-wrapper.cc
+		src\native-src\bindings\range-wrapper.h = src\native-src\bindings\range-wrapper.h
+		src\native-src\bindings\string-conversion.cc = src\native-src\bindings\string-conversion.cc
+		src\native-src\bindings\string-conversion.h = src\native-src\bindings\string-conversion.h
+		src\native-src\bindings\text-buffer-snapshot-wrapper.cc = src\native-src\bindings\text-buffer-snapshot-wrapper.cc
+		src\native-src\bindings\text-buffer-snapshot-wrapper.h = src\native-src\bindings\text-buffer-snapshot-wrapper.h
+		src\native-src\bindings\text-buffer-wrapper.cc = src\native-src\bindings\text-buffer-wrapper.cc
+		src\native-src\bindings\text-buffer-wrapper.h = src\native-src\bindings\text-buffer-wrapper.h
+		src\native-src\bindings\text-reader.cc = src\native-src\bindings\text-reader.cc
+		src\native-src\bindings\text-reader.h = src\native-src\bindings\text-reader.h
+		src\native-src\bindings\text-writer.cc = src\native-src\bindings\text-writer.cc
+		src\native-src\bindings\text-writer.h = src\native-src\bindings\text-writer.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "em", "em", "{10AA729E-6268-42CC-BB29-0BB264CF7192}"
+	ProjectSection(SolutionItems) = preProject
+		src\native-src\bindings\em\auto-wrap.h = src\native-src\bindings\em\auto-wrap.h
+		src\native-src\bindings\em\epilogue.js = src\native-src\bindings\em\epilogue.js
+		src\native-src\bindings\em\marker-index.cc = src\native-src\bindings\em\marker-index.cc
+		src\native-src\bindings\em\patch.cc = src\native-src\bindings\em\patch.cc
+		src\native-src\bindings\em\point.cc = src\native-src\bindings\em\point.cc
+		src\native-src\bindings\em\prologue.js = src\native-src\bindings\em\prologue.js
+		src\native-src\bindings\em\range.cc = src\native-src\bindings\em\range.cc
+		src\native-src\bindings\em\text-buffer.cc = src\native-src\bindings\em\text-buffer.cc
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +123,10 @@ Global
 		{F8112FF9-EEA1-46CC-86BB-DE8567A54B08} = {0BD3048B-00A5-4F19-8DB7-CEE165CA4E0C}
 		{6DEAF4F0-DA1E-4EB3-91CC-7495DC2B2880} = {3397E567-98F6-4B13-8BBE-1C86F3229D82}
 		{971AEA3B-405D-4683-AE7C-72C5A0989C35} = {6DEAF4F0-DA1E-4EB3-91CC-7495DC2B2880}
+		{183F2FC2-04B7-44E5-A52D-8782B52078BB} = {0BD3048B-00A5-4F19-8DB7-CEE165CA4E0C}
+		{1BC6C3B8-9C62-4441-8C96-3E1BC2C8765F} = {183F2FC2-04B7-44E5-A52D-8782B52078BB}
+		{4EF810D1-3BDB-4C91-A237-269AE5675446} = {183F2FC2-04B7-44E5-A52D-8782B52078BB}
+		{10AA729E-6268-42CC-BB29-0BB264CF7192} = {4EF810D1-3BDB-4C91-A237-269AE5675446}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {574B7864-41A2-4ACE-97A3-8263D78446D0}
