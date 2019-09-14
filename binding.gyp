@@ -1,28 +1,6 @@
 {
     "targets": [
         {
-            "target_name": "superstring",
-            "dependencies": [
-                "superstring_core"
-            ],
-            "sources": [
-                "src/native-src/bindings/bindings.cc",
-                "src/native-src/bindings/marker-index-wrapper.cc",
-                "src/native-src/bindings/patch-wrapper.cc",
-                "src/native-src/bindings/point-wrapper.cc",
-                "src/native-src/bindings/range-wrapper.cc",
-                "src/native-src/bindings/text-buffer-wrapper.cc",
-                "src/native-src/bindings/text-buffer-snapshot-wrapper.cc",
-                "src/native-src/bindings/text-reader.cc",
-                "src/native-src/bindings/string-conversion.cc",
-                "src/native-src/bindings/text-writer.cc",
-            ],
-            "include_dirs": [
-              "src/native-src/core",
-              "<!(node -e \"require('nan')\")"
-            ],
-        },
-        {
             "target_name": "superstring_core",
             "type": "static_library",
             "dependencies": [
