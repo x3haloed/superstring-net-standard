@@ -5,6 +5,8 @@
 !index.js
 !browser.js
 !src/native-src/core/*
+!src/native-src/bindings/*.h
+!src/native-src/bindings/*.cc
 
 !vendor/libcxx/*
 
