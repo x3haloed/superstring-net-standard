@@ -47,8 +47,6 @@ em++                          \
   -xc++                       \
   src/native-src/core/*.cc    \
   build/pcre.o                \
-  -s WASM=1                   \
-  -s SIDE_MODULE=1            \
   -s TOTAL_MEMORY=134217728   \
   --memory-init-file 0        \
   "$@"
