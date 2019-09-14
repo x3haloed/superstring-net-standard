@@ -19,6 +19,7 @@ steps:
     ./script/install-emscripten.sh
     npm install
     npm run build:browser
+    ls
   displayName: 'npm install and build'
 
 - task: PublishBuildArtifacts@1
@@ -29,6 +30,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.Repository.LocalPath)'
+    PathtoPublish: '$(Build.Repository.LocalPath)/superstring.js'
     ArtifactName: 'browser'
     publishLocation: 'Container'
