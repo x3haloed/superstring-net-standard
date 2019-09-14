@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Patch.cs" />
+    <Compile Remove="TextBuffer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="WebAssembly" Version="0.7.1-preview" />
   </ItemGroup>
 
