@@ -6,19 +6,19 @@
                 "superstring_core"
             ],
             "sources": [
-                "src/bindings/bindings.cc",
-                "src/bindings/marker-index-wrapper.cc",
-                "src/bindings/patch-wrapper.cc",
-                "src/bindings/point-wrapper.cc",
-                "src/bindings/range-wrapper.cc",
-                "src/bindings/text-buffer-wrapper.cc",
-                "src/bindings/text-buffer-snapshot-wrapper.cc",
-                "src/bindings/text-reader.cc",
-                "src/bindings/string-conversion.cc",
-                "src/bindings/text-writer.cc",
+                "src/native-src/bindings/bindings.cc",
+                "src/native-src/bindings/marker-index-wrapper.cc",
+                "src/native-src/bindings/patch-wrapper.cc",
+                "src/native-src/bindings/point-wrapper.cc",
+                "src/native-src/bindings/range-wrapper.cc",
+                "src/native-src/bindings/text-buffer-wrapper.cc",
+                "src/native-src/bindings/text-buffer-snapshot-wrapper.cc",
+                "src/native-src/bindings/text-reader.cc",
+                "src/native-src/bindings/string-conversion.cc",
+                "src/native-src/bindings/text-writer.cc",
             ],
             "include_dirs": [
-              "src/core",
+              "src/native-src/core",
               "<!(node -e \"require('nan')\")"
             ],
         },
@@ -29,17 +29,17 @@
                 "./vendor/pcre/pcre.gyp:pcre",
             ],
             "sources": [
-                "src/core/encoding-conversion.cc",
-                "src/core/marker-index.cc",
-                "src/core/patch.cc",
-                "src/core/point.cc",
-                "src/core/range.cc",
-                "src/core/regex.cc",
-                "src/core/text.cc",
-                "src/core/text-buffer.cc",
-                "src/core/text-slice.cc",
-                "src/core/text-diff.cc",
-                "src/core/libmba-diff.cc",
+                "src/native-src/core/encoding-conversion.cc",
+                "src/native-src/core/marker-index.cc",
+                "src/native-src/core/patch.cc",
+                "src/native-src/core/point.cc",
+                "src/native-src/core/range.cc",
+                "src/native-src/core/regex.cc",
+                "src/native-src/core/text.cc",
+                "src/native-src/core/text-buffer.cc",
+                "src/native-src/core/text-slice.cc",
+                "src/native-src/core/text-diff.cc",
+                "src/native-src/core/libmba-diff.cc",
             ],
             "include_dirs": [
                 "vendor/libcxx"
@@ -92,7 +92,7 @@
                 ],
                 "include_dirs": [
                     "vendor",
-                    "src/core",
+                    "src/native-src/core",
                 ],
                 "dependencies": [
                     "superstring_core"

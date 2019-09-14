@@ -40,16 +40,16 @@ em++                                    \
   --bind                                \
   -o browser.js                         \
   -O3                                   \
-  -I src/bindings/em                    \
-  -I src/core                           \
+  -I src/native-src/bindings/em                    \
+  -I src/native-src/core                           \
   -I vendor/libcxx                      \
   -I vendor/pcre/include                \
   -D PCRE2_CODE_UNIT_WIDTH=16           \
   -xc++                                 \
-  --pre-js src/bindings/em/prologue.js  \
-  --post-js src/bindings/em/epilogue.js \
-  src/core/*.cc                         \
-  src/bindings/em/*.cc                  \
+  --pre-js src/native-src/bindings/em/prologue.js  \
+  --post-js src/native-src/bindings/em/epilogue.js \
+  src/native-src/core/*.cc                         \
+  src/native-src/bindings/em/*.cc                  \
   build/pcre.o                          \
   -s TOTAL_MEMORY=134217728             \
   --memory-init-file 0                  \

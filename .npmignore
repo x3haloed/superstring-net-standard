@@ -4,18 +4,18 @@
 !LICENSE
 !index.js
 !browser.js
-!src/core/*
-!src/bindings/*.h
-!src/bindings/*.cc
+!src/native-src/core/*
+!src/native-src/bindings/*.h
+!src/native-src/bindings/*.cc
 
 !vendor/libcxx/*
 
 !vendor/pcre/pcre.gyp
 !vendor/pcre/pcre2_chartables.c
 !vendor/pcre/include/*.h
-!vendor/pcre/10.23/src/*.h
-!vendor/pcre/10.23/src/*.c
-!vendor/pcre/10.23/src/sljit/*
+!vendor/pcre/10.23/src/native-src/*.h
+!vendor/pcre/10.23/src/native-src/*.c
+!vendor/pcre/10.23/src/native-src/sljit/*
 !vendor/pcre/10.23/COPYING
 !vendor/pcre/10.23/LICENSE
 
