@@ -1,5 +1,4 @@
 #include "point.h"
-#include <emscripten/bind.h>
 #include <algorithm>
 #include <limits>
 
@@ -31,10 +30,4 @@ void set_column(Point &point, double column) {
       static_cast<double>(std::numeric_limits<unsigned>::max())
     );
   }
-}
-
-EMSCRIPTEN_BINDINGS(Point) {
-  emscripten::value_object<Point>("Point")
-    .field("row", &get_row, &set_row)
-    .field("column", &get_column, &set_column);
 }
