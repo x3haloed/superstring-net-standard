@@ -1,6 +1,5 @@
 #include <memory>
 #include <vector>
-#include "auto-wrap.h"
 #include "patch.h"
 
 using std::runtime_error;
