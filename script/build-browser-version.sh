@@ -38,7 +38,7 @@ emcc                                         \
 
 em++                                                \
   --bind                                            \
-  -o superstring.js                               \
+  -o superstring.wasm                               \
   -O3                                               \
   -I src/native-src/bindings/em                     \
   -I src/native-src/core                            \
