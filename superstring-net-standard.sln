@@ -76,11 +76,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "em", "em", "{CBEB2663-E517-49D4-8828-357515088668}"
 	ProjectSection(SolutionItems) = preProject
 		src\native-src\bindings\em\auto-wrap.h = src\native-src\bindings\em\auto-wrap.h
-		src\native-src\bindings\em\epilogue.js = src\native-src\bindings\em\epilogue.js
 		src\native-src\bindings\em\marker-index.cc = src\native-src\bindings\em\marker-index.cc
 		src\native-src\bindings\em\patch.cc = src\native-src\bindings\em\patch.cc
 		src\native-src\bindings\em\point.cc = src\native-src\bindings\em\point.cc
-		src\native-src\bindings\em\prologue.js = src\native-src\bindings\em\prologue.js
 		src\native-src\bindings\em\range.cc = src\native-src\bindings\em\range.cc
 		src\native-src\bindings\em\text-buffer.cc = src\native-src\bindings\em\text-buffer.cc
 	EndProjectSection
