@@ -1,4 +1,3 @@
-#include "auto-wrap.h"
 #include "text-buffer.h"
 #include "marker-index.h"
 #include <vector>
