@@ -37,7 +37,7 @@ emcc                                         \
   vendor/pcre/10.23/src/pcre2_xclass.c
 
 em++                                                \
-  --bind                                            \
+  -std=c++11                                        \
   -o superstring.wasm                               \
   -O3                                               \
   -I src/native-src/bindings/em                     \
