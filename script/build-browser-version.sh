@@ -49,6 +49,8 @@ em++                                                \
   src/native-src/core/*.cc                          \
   src/native-src/bindings/em/*.cc                   \
   build/pcre.o                                      \
+  -s EXPORT_ALL=1                                   \
+  -s ONLY_MY_CODE=1                                 \
   -s TOTAL_MEMORY=134217728                         \
   --memory-init-file 0                              \
   "$@"
