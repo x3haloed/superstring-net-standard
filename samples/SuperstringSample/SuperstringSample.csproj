@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="WasmerSharp" Version="0.6.0" />
     <PackageReference Include="WebAssembly" Version="0.7.1-preview" />
   </ItemGroup>
 
