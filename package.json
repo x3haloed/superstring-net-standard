@@ -5,15 +5,11 @@
   "main": "./index",
   "browser": "./browser",
   "scripts": {
-    "build:node": "node-gyp rebuild",
-    "build:browser": "script/build-browser-version.sh",
-    "build": "npm run build:node && npm run build:browser",
+    "build": "script/build-browser-version.sh",
     "test:native": "script/test-native.js",
-    "test:node": "mocha test/js/*.js",
     "test:browser": "SUPERSTRING_USE_BROWSER_VERSION=1 mocha test/js/*.js",
     "test": "npm run test:node && npm run test:browser",
     "benchmark": "node benchmark/marker-index.benchmark.js",
-    "prepublishOnly": "npm run build:browser",
     "standard": "standard --recursive src test"
   },
   "repository": {

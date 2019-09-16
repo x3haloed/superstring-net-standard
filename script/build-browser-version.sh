@@ -37,14 +37,12 @@ mkdir -p build
 
 (cd build && exec clang -S -emit-llvm -O2           \
   -std=c++11                                        \
-  -I ../src/native-src/bindings/em                     \
   -I ../src/native-src/core                            \
   -I ../vendor/libcxx                                  \
   -I ../vendor/pcre/include                            \
   -D PCRE2_CODE_UNIT_WIDTH=16                       \
   -xc++                                             \
   ../src/native-src/core/*.cc                          \
-  ../src/native-src/bindings/em/*.cc                   \
 )
 
 clang                                               \
@@ -53,7 +51,6 @@ clang                                               \
   -nostartfiles                                     \
   --for-linker=--no-entry                           \
   --for-linker=--export=_ZN11MarkerIndex22generate_random_numberEv           \
-  --for-linker=--allow-undefined                           \
   --for-linker=--demangle                           \
   -s                                                \
   -o superstring.wasm                               \
