@@ -51,6 +51,7 @@ clang                                               \
   -nostartfiles                                     \
   --for-linker=--no-entry                           \
   --for-linker=--export=_ZN11MarkerIndex22generate_random_numberEv           \
+  --for-linker=--export=_ZN11MarkerIndex6insertEj5PointS0_           \
   --for-linker=--demangle                           \
   -s                                                \
   -o superstring.wasm                               \
