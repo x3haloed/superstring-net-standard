@@ -37,14 +37,13 @@ mkdir -p build
 
 (cd build && exec clang -S -emit-llvm -O2           \
   -std=c++11                                        \
-  -I ../src/native-src/bindings                            \
   -I ../src/native-src/core                            \
   -I ../vendor/libcxx                                  \
   -I ../vendor/pcre/include                            \
   -D PCRE2_CODE_UNIT_WIDTH=16                       \
   -xc++                                             \
   ../src/native-src/core/*.cc                          \
-  ../src/native-src/bindings/*.cc                          \
+  ../src/native-src/bindings/point-wrapper.cc                          \
 )
 
 clang                                               \
@@ -52,9 +51,10 @@ clang                                               \
   --sysroot /opt/wasi-sdk/share/wasi-sysroot     \
   -nostartfiles                                     \
   --for-linker=--no-entry                           \
-  --for-linker=--export=_ZN11MarkerIndex22generate_random_numberEv           \
-  --for-linker=--export=_ZNK5Point7compareERKS_           \
-  --for-linker=--export=_ZNK5Point7is_zeroEv           \
+  --for-linker=--export=_ZN12PointWrapper15construct_pointEv           \
+  --for-linker=--export=_ZN12PointWrapper16release_instanceEPv           \
+  --for-linker=--export=_ZN12PointWrapper7get_rowEPv           \
+  --for-linker=--export=_ZN12PointWrapper10get_columnEPv           \
   --for-linker=--demangle                           \
   -s                                                \
   -o superstring.wasm                               \
