@@ -1,34 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using WebAssembly;
-using WebAssembly.Runtime;
-
-namespace Superstring
+﻿namespace Superstring
 {
-    public abstract class MarkerIndex
+    public class MarkerIndex
     {
-        private static InstanceCreator<MarkerIndex> _instanceCreator;
-        private static object _lockSync = new { };
- 
-        public static MarkerIndex Make(uint seed = 0u)
-        {
-            if (_instanceCreator == null)
-            {
-                lock (_lockSync)
-                {
-                    if (_instanceCreator == null)
-                    {
-                        _instanceCreator = Compile.FromBinary<MarkerIndex>("superstring.wasm");
-                    }
-                }
-            }
+        private readonly uint _id;
+        private readonly uint _seed;
 
-            using (var instance = _instanceCreator(new ImportDictionary()))
-            {
-                return instance.Exports;
-                var e = new Export();
-            }
+        public MarkerIndex(uint seed = 0u)
+        {
+            _id = 0;    // TODO: Need to figure out algorithm for assigning IDs.
+            _seed = seed;
         }
+
+        public int GenerateRandomNumber(int p1) => WasmManager.Exports._ZN11MarkerIndex22generate_random_numberEv(p1);
+        public void Insert(uint markerId, Point start, Point end) => WasmManager.Exports._ZN11MarkerIndex6insertEj5PointS0_(markerId, start, end);
     }
 }

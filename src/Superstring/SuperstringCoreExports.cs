@@ -1,26 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Superstring
+﻿namespace Superstring
 {
     public abstract class SuperstringCoreExports
     {
-        //public abstract 
-
-
-
-
-        //void Init(Local<Object> exports)
-        //{
-        //    PointWrapper::init();
-        //    RangeWrapper::init();
-        //    PatchWrapper::init(exports);
-        //    MarkerIndexWrapper::init(exports);
-        //    TextBufferWrapper::init(exports);
-        //    TextWriter::init(exports);
-        //    TextReader::init(exports);
-        //    TextBufferSnapshotWrapper::init();
-        //}
+        public abstract int _ZN11MarkerIndex22generate_random_numberEv(int p1);
+        public abstract void _ZN11MarkerIndex6insertEj5PointS0_(uint id, Point start, Point end);
     }
 }
