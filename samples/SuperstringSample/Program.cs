@@ -8,6 +8,8 @@ namespace SuperstringSample
     public abstract class SuperstringWasmExports
     {
         public abstract int _ZN11MarkerIndex22generate_random_numberEv(int p1);
+        public abstract int _ZNK5Point7compareERKS_(IntPtr start, IntPtr end);
+        public abstract bool _ZNK5Point7is_zeroEv();
     }
 
     class Program
@@ -32,6 +34,7 @@ namespace SuperstringSample
             var _instanceCreator = module.Compile<SuperstringWasmExports>();
             using (var instance = _instanceCreator(importDictionary))
             {
+                int rNum = instance.Exports._ZN11MarkerIndex22generate_random_numberEv(1);
                 int rNum = instance.Exports._ZN11MarkerIndex22generate_random_numberEv(1);
             }
         }

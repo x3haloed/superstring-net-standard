@@ -12,6 +12,6 @@
         }
 
         public int GenerateRandomNumber(int p1) => WasmManager.Exports._ZN11MarkerIndex22generate_random_numberEv(p1);
-        public void Insert(uint markerId, Point start, Point end) => WasmManager.Exports._ZN11MarkerIndex6insertEj5PointS0_(markerId, start, end);
+        public void Insert(uint markerId, Point start, Point end) => WasmManager.Exports.ZNK5Point7compareERKS(markerId, start, end);
     }
 }
