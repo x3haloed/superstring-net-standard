@@ -47,10 +47,12 @@ mkdir -p build
 
 clang                                               \
   -target wasm32-wasi                               \
-  --sysroot /home/ckirby/code/wasi-libc/sysroot     \
+  --sysroot /opt/wasi-sdk/share/wasi-sysroot     \
   -nostartfiles                                     \
   --for-linker=--no-entry                           \
   --for-linker=--export=_ZN11MarkerIndex22generate_random_numberEv           \
+  --for-linker=--export=_ZNK5Point7compareERKS_           \
+  --for-linker=--export=_ZNK5Point7is_zeroEv           \
   --for-linker=--demangle                           \
   -s                                                \
   -o superstring.wasm                               \
