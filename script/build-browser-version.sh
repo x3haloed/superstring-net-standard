@@ -37,12 +37,14 @@ mkdir -p build
 
 (cd build && exec clang -S -emit-llvm -O2           \
   -std=c++11                                        \
+  -I ../src/native-src/bindings                            \
   -I ../src/native-src/core                            \
   -I ../vendor/libcxx                                  \
   -I ../vendor/pcre/include                            \
   -D PCRE2_CODE_UNIT_WIDTH=16                       \
   -xc++                                             \
   ../src/native-src/core/*.cc                          \
+  ../src/native-src/bindings/*.cc                          \
 )
 
 clang                                               \

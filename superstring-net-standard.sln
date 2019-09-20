@@ -48,6 +48,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{8EAD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperstringSample", "samples\SuperstringSample\SuperstringSample.csproj", "{790F54D1-2791-456C-9B29-FF8064C57E0B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bindings", "bindings", "{AE014E22-FBA3-4169-AF00-4BC603CB55CD}"
+	ProjectSection(SolutionItems) = preProject
+		src\native-src\bindings\bindings.cc = src\native-src\bindings\bindings.cc
+		src\native-src\bindings\marker-index-wrapper.cc = src\native-src\bindings\marker-index-wrapper.cc
+		src\native-src\bindings\marker-index-wrapper.h = src\native-src\bindings\marker-index-wrapper.h
+		src\native-src\bindings\noop.h = src\native-src\bindings\noop.h
+		src\native-src\bindings\number-conversion.h = src\native-src\bindings\number-conversion.h
+		src\native-src\bindings\patch-wrapper.cc = src\native-src\bindings\patch-wrapper.cc
+		src\native-src\bindings\patch-wrapper.h = src\native-src\bindings\patch-wrapper.h
+		src\native-src\bindings\point-wrapper.cc = src\native-src\bindings\point-wrapper.cc
+		src\native-src\bindings\point-wrapper.h = src\native-src\bindings\point-wrapper.h
+		src\native-src\bindings\range-wrapper.cc = src\native-src\bindings\range-wrapper.cc
+		src\native-src\bindings\range-wrapper.h = src\native-src\bindings\range-wrapper.h
+		src\native-src\bindings\string-conversion.cc = src\native-src\bindings\string-conversion.cc
+		src\native-src\bindings\string-conversion.h = src\native-src\bindings\string-conversion.h
+		src\native-src\bindings\text-buffer-snapshot-wrapper.cc = src\native-src\bindings\text-buffer-snapshot-wrapper.cc
+		src\native-src\bindings\text-buffer-snapshot-wrapper.h = src\native-src\bindings\text-buffer-snapshot-wrapper.h
+		src\native-src\bindings\text-buffer-wrapper.cc = src\native-src\bindings\text-buffer-wrapper.cc
+		src\native-src\bindings\text-buffer-wrapper.h = src\native-src\bindings\text-buffer-wrapper.h
+		src\native-src\bindings\text-reader.cc = src\native-src\bindings\text-reader.cc
+		src\native-src\bindings\text-reader.h = src\native-src\bindings\text-reader.h
+		src\native-src\bindings\text-writer.cc = src\native-src\bindings\text-writer.cc
+		src\native-src\bindings\text-writer.h = src\native-src\bindings\text-writer.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +130,7 @@ Global
 		{183F2FC2-04B7-44E5-A52D-8782B52078BB} = {0BD3048B-00A5-4F19-8DB7-CEE165CA4E0C}
 		{1BC6C3B8-9C62-4441-8C96-3E1BC2C8765F} = {183F2FC2-04B7-44E5-A52D-8782B52078BB}
 		{790F54D1-2791-456C-9B29-FF8064C57E0B} = {8EAD3D20-9DB1-45CC-B499-D661DD52A698}
+		{AE014E22-FBA3-4169-AF00-4BC603CB55CD} = {183F2FC2-04B7-44E5-A52D-8782B52078BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {574B7864-41A2-4ACE-97A3-8263D78446D0}
