@@ -14,6 +14,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreUnitTests", "test\netcore\NetCoreUnitTests\NetCoreUnitTests.csproj", "{971AEA3B-405D-4683-AE7C-72C5A0989C35}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "native-src", "native-src", "{183F2FC2-04B7-44E5-A52D-8782B52078BB}"
+	ProjectSection(SolutionItems) = preProject
+		src\native-src\CMakeLists.txt = src\native-src\CMakeLists.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{1BC6C3B8-9C62-4441-8C96-3E1BC2C8765F}"
 	ProjectSection(SolutionItems) = preProject
