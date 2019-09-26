@@ -1,0 +1,3 @@
+[submodule "src/native-src/vendor/win-iconv"]
+	path = src/native-src/vendor/win-iconv
+	url = https://github.com/win-iconv/win-iconv
