@@ -33,10 +33,10 @@ void PatchWrapper::splice(void* pInstance, void* start, void* deletion_extent, v
   Point* deletion_extent_point = (Point*)deletion_extent;
   Point* insertion_extent_point = (Point*)insertion_extent;
 
-  Text deleted_text_text = new Text(deleted_text);
+  Text* deleted_text_text = new Text(deleted_text);
   auto deleted_text_optional_text = optional(deleted_text_text);
 
-  Text inserted_text_text = new Text(inserted_text);
+  Text* inserted_text_text = new Text(inserted_text);
   auto inserted_text_optional_text = optional(inserted_text_text);
 
   //if (info.Length() >= 4) {

@@ -11,7 +11,7 @@ class PatchWrapper {
   static void splice(
     void* pInstance,
 	void* new_splice_start, void* new_deletion_extent, void* new_insertion_extent,
-    std::string deleted_text, std::string inserted_text, unsigned deleted_text_size);
+	  std::basic_string<char16_t> deleted_text, std::basic_string<char16_t> inserted_text, unsigned deleted_text_size);
   static void splice_old(void* pInstance, void* start, void* deletion_extent, void* insertion_extent);
   static void* copy(void* pInstance);
   static void* invert(void* pInstance);

@@ -13,10 +13,10 @@ void RangeWrapper::release_instance(void* rInstance) {
 
 void* RangeWrapper::get_start(void* rInstance) {
   Range* r = (Range*)rInstance;
-  return r.start;
+  return &r->start;
 }
 
 void* RangeWrapper::get_end(void* rInstance) {
   Range* r = (Range*)rInstance;
-  return r.end;
+  return &r->end;
 }

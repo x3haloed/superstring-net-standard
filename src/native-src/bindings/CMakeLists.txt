@@ -35,6 +35,6 @@ add_definitions(-DPCRE2_CODE_UNIT_WIDTH=16)
 # Add source to this project's executable.
 include_directories("../core" "../vendor/libcxx" "../vendor/pcre/include")
 file(GLOB source_files "*.cc")
-add_library (bindings STATIC ${source_files})
+add_library (bindings STATIC "${CMAKE_CURRENT_BINARY_DIR}/../core/core.lib" ${source_files})
 
 # TODO: Add tests and install targets if needed.

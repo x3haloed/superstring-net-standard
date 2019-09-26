@@ -27,12 +27,14 @@ set(APPLE)
 # And for UNIX and CMAKE_HOST_UNIX. However, Emscripten is often able to mimic being a Linux/Unix system, in which case a lot of existing CMakeLists.txt files can be configured for Emscripten while assuming UNIX build, so this is left enabled.
 set(UNIX 1)
 
-set(CMAKE_CXX_FLAGS "-v -O2 -std=c++11 -xc++")
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "-v -O2")
 
 add_definitions(-DPCRE2_CODE_UNIT_WIDTH=16)
 
 # Add source to this project's executable.
-include_directories("../vendor/libcxx" "../vendor/pcre/include")
+include_directories("../vendor/libcxx" "../vendor/pcre/include" "../vendor/win-iconv")
 file(GLOB source_files "*.cc")
 add_library (core STATIC ${source_files})
 
