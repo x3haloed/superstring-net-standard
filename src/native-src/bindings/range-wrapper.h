@@ -1,24 +1,15 @@
 #ifndef SUPERSTRING_RANGE_WRAPPER_H
 #define SUPERSTRING_RANGE_WRAPPER_H
 
-#include "optional.h"
-#include "point.h"
-#include "range.h"
+//#include "point.h"
+//#include "range.h"
 
-class RangeWrapper : public Nan::ObjectWrap {
+class RangeWrapper {
 public:
-  static void init();
-  static v8::Local<v8::Value> from_range(Range);
-  static optional<Range> range_from_js(v8::Local<v8::Value>);
-
-private:
-  RangeWrapper(Range);
-
-  static void construct(const Nan::FunctionCallbackInfo<v8::Value> &);
-  static void get_start(v8::Local<v8::String>, const Nan::PropertyCallbackInfo<v8::Value> &);
-  static void get_end(v8::Local<v8::String>, const Nan::PropertyCallbackInfo<v8::Value> &);
-
-  Range range;
+  static void* construct_range();
+  static void release_instance(void* rInstance);
+  static void* get_start(void* rInstance);
+  static void* get_end(void* rInstance);
 };
 
 #endif // SUPERSTRING_RANGE_WRAPPER_H
