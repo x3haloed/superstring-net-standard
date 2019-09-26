@@ -1,5 +1,7 @@
 #include "patch.h"
-#include <array>
+#include <vector>
+
+using Change = Patch::Change;
 
 class PatchWrapper {
  public:
@@ -13,14 +15,14 @@ class PatchWrapper {
   static void splice_old(void* pInstance, void* start, void* deletion_extent, void* insertion_extent);
   static void* copy(void* pInstance);
   static void* invert(void* pInstance);
-  static array<Change>* get_changes(void* pInstance);
-  static array<Change>* get_changes_in_old_range(void* pInstance, void* start, void* end);
-  static array<Change>* get_changes_in_new_range(void* pInstance, void* start, void* end);
+  static std::vector<Change*> get_changes(void* pInstance);
+  static std::vector<Change*> get_changes_in_old_range(void* pInstance, void* start, void* end);
+  static std::vector<Change*> get_changes_in_new_range(void* pInstance, void* start, void* end);
   static void* change_for_old_position(void* pInstance, void* start);
   static void* change_for_new_position(void* pInstance, void* start);
   static std::string serialize(void* pInstance);
-  static void* deserialize(array<uint8_t> data);
-  static void* compose(Patch* patches[]);
+  static void* deserialize(std::vector<uint8_t> data);
+  static void* compose(std::vector<Patch*> patches);
   static std::string get_dot_graph(void* pInstance);
   static std::string get_json(void* pInstance);
   static uint32_t get_change_count(void* pInstance);

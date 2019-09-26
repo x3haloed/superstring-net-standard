@@ -43,7 +43,17 @@ mkdir -p build
   -D PCRE2_CODE_UNIT_WIDTH=16                       \
   -xc++                                             \
   ../src/native-src/core/*.cc                          \
+)
+
+(cd build && exec clang -S -emit-llvm -O2           \
+  -I ../src/native-src/core                            \
+  -I ../vendor/libcxx                                  \
+  -I ../vendor/pcre/include                            \
+  ./*.ll                                      \
   ../src/native-src/bindings/point-wrapper.cc                          \
+  ../src/native-src/bindings/change-wrapper.cc                          \
+  ../src/native-src/bindings/patch-wrapper.cc                          \
+  ../src/native-src/bindings/range-wrapper.cc                          \
 )
 
 clang                                               \

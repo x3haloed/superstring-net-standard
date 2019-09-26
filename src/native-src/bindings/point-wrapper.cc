@@ -15,10 +15,10 @@ void PointWrapper::release_instance(void* pInstance)
 
 unsigned PointWrapper::get_row(void* pInstance) {
   Point* p = (Point*)pInstance;
-  return p.row;
+  return p->row;
 }
 
 unsigned PointWrapper::get_column(void* pInstance) {
   Point* p = (Point*)pInstance;
-  return p.column;
+  return p->column;
 }

@@ -7,16 +7,16 @@ void* RangeWrapper::construct_range() {
 }
 
 void RangeWrapper::release_instance(void* rInstance) {
-  Range* r = (Range*)pInstance;
+  Range* r = (Range*)rInstance;
   delete r;
 }
 
 void* RangeWrapper::get_start(void* rInstance) {
-  Range* r = (Range*)pInstance;
+  Range* r = (Range*)rInstance;
   return r.start;
 }
 
 void* RangeWrapper::get_end(void* rInstance) {
-  Range* r = (Range*)pInstance;
+  Range* r = (Range*)rInstance;
   return r.end;
 }
